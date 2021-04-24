@@ -1,8 +1,8 @@
-package com.example.imdbapp.di
+package com.example.imdbapp.common.di
 
 import android.content.Context
 import androidx.lifecycle.ViewModelProvider
-import com.example.imdbapp.di.providers.*
+import com.example.imdbapp.common.di.providers.*
 
 object DependencyProvider {
     private lateinit var applicationContext: Context
@@ -16,7 +16,7 @@ object DependencyProvider {
     }
 
     private val apiSourceProvider: ApiSourceProvider by lazy {
-        ApiSourceProvider()
+        ApiSourceProvider(retrofitProvider)
     }
 
     private val internetSourceProvider: InternetSourceProvider by lazy {

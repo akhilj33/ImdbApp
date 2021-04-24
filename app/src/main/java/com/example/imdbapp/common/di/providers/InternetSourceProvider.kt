@@ -1,4 +1,4 @@
-package com.example.imdbapp.di.providers
+package com.example.imdbapp.common.di.providers
 
 import android.content.Context
 
